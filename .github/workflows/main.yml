@@ -1,0 +1,11 @@
+name: Mac Build
+on: push
+jobs:
+  build:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v5
+      - name: 查看mac信息
+        run: |
+          uname -a
+          xcodebuild -version
